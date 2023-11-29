@@ -1,4 +1,4 @@
-package it.hark.app.WorkoutLogger;
+package it.hark.app.workoutlogger;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

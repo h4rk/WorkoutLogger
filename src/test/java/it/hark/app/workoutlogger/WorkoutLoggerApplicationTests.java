@@ -1,4 +1,4 @@
-package it.hark.app.WorkoutLogger;
+package it.hark.app.workoutlogger;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

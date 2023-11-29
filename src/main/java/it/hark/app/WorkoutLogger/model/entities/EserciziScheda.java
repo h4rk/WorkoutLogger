@@ -1,4 +1,4 @@
-package it.hark.app.WorkoutLogger.model.entities;
+package it.hark.app.workoutlogger.model.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

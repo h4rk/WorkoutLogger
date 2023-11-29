@@ -1,4 +1,4 @@
-package it.hark.app.WorkoutLogger.controller;
+package it.hark.app.workoutlogger.controller;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -15,12 +15,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import it.hark.app.WorkoutLogger.model.entities.EserciziScheda;
-import it.hark.app.WorkoutLogger.model.entities.Scheda;
-import it.hark.app.WorkoutLogger.model.entities.Workout;
-import it.hark.app.WorkoutLogger.model.repositories.EserciziSchedaRepository;
-import it.hark.app.WorkoutLogger.model.repositories.SchedaRepository;
-import it.hark.app.WorkoutLogger.model.repositories.WorkoutRepository;
+import it.hark.app.workoutlogger.model.entities.EserciziScheda;
+import it.hark.app.workoutlogger.model.entities.Scheda;
+import it.hark.app.workoutlogger.model.entities.Workout;
+import it.hark.app.workoutlogger.model.repositories.EserciziSchedaRepository;
+import it.hark.app.workoutlogger.model.repositories.SchedaRepository;
+import it.hark.app.workoutlogger.model.repositories.WorkoutRepository;
 
 @RestController
 public class WorkoutLoggerRestController {

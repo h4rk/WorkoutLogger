@@ -1,4 +1,4 @@
-package it.hark.app.WorkoutLogger.controller;
+package it.hark.app.workoutlogger.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import it.hark.app.WorkoutLogger.model.entities.Workout;
-import it.hark.app.WorkoutLogger.model.repositories.WorkoutRepository;
+import it.hark.app.workoutlogger.model.entities.Workout;
+import it.hark.app.workoutlogger.model.repositories.WorkoutRepository;
 
 @Controller
 public class WorkoutLoggerController {
