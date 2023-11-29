@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Workout Logger</title>
+        <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+    </head>
+    <body>
+        <section>
+        	<h2>Workout Logger</h2>
+            <div class="container">
+                <h3>Nuovo workout:</h3>
+                <form action="">
+                	<input name="idScheda" type="text" placeholder="id scheda">
+                	<input name="data" type="date" placeholder="data">
+                	<input name="durata" type="number" placeholder="durata">
+                	<input name="kcal" type="number" placeholder="kcal">
+                	<input name="feelScore" type="number" placeholder="feel score">
+                	<input name="note" type="text"placeholder="note">
+                	<button>Reset</button>
+                	<button hx-post="/postWorkout" hx-target="#table-container">Add</button>
+                </form>
+            </div>
+        </section>
+        <section>
+        	<h2>Workouts:</h2>
+        	<div id="table-container">
+	            <div hx-get="/loadTable" hx-trigger="load" hx-swap="outerHTML">
+	                <img  alt="Loading table..." class="htmx-indicator" width="100" src="/public/imgs/3-dots-scale.svg"/>
+	            </div>
+	        </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<table>
+	<thead>
+		<tr>
+			<th>Workout</th>
+			<th>Data</th>
+			<th>Kcal</th>
+		</tr>
+	</thead>
+	<tbody hx-confirm="Are you sure?">
+         <tr th:each="workout: ${workouts}">
+         	<td th:text="${workout.idScheda}"/>
+         	<td th:text="${workout.data}"/>
+         	<td th:text="${workout.kcal}"/>
+         	<td>
+				<button class="btn btn-danger" th:attr="hx-delete=@{/deleteWorkout/{idWorkout}(idWorkout=${workout.idWorkout})},hx-target='#table-container'">Delete</button>
+			</td>
+         </tr>
+	</tbody>
+</table>
