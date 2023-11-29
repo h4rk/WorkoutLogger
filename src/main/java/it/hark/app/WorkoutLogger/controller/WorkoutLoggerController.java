@@ -54,7 +54,7 @@ public class WorkoutLoggerController {
 	}
 	
 	@GetMapping("/workouts")
-	public String getWorkouts(Model model) {
+	public String getWorkouts() {
 		logger.info("Received request for getWorkouts()");
 		return "workouts";
 	}
