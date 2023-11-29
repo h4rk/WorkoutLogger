@@ -21,7 +21,7 @@ import it.hark.app.WorkoutLogger.model.entities.Workout;
 import it.hark.app.WorkoutLogger.model.repositories.EserciziSchedaRepository;
 import it.hark.app.WorkoutLogger.model.repositories.SchedaRepository;
 import it.hark.app.WorkoutLogger.model.repositories.WorkoutRepository;
-
+/*
 @RestController
 public class WorkoutLoggerRestController {
 	
@@ -159,7 +159,9 @@ public class WorkoutLoggerRestController {
 			logger.log(Level.INFO, "Nessun esercizio presente con id="+idEsercizio+".");
 			return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		}
+	
 	}
 	
 	
 }
+*/

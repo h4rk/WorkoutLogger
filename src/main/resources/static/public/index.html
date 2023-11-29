@@ -3,11 +3,12 @@
     <head>
         <title>Workout Logger</title>
         <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+        <script type = "text/javascript" src="/public/utils.js"></script>
     </head>
     <body>
     	<nav>
     		<div hx-get="/schede">Schede</div>
-    		<div hx-get="/workouts">Workouts</div>
+    		<div hx-get="/workouts" hx-target="body" style="color:855d49">Workouts</div>
     	</nav>        
         <section>
         	<h2>Workout recenti:</h2>

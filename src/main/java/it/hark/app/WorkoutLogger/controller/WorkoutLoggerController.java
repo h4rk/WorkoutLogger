@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import it.hark.app.WorkoutLogger.model.entities.Workout;
 import it.hark.app.WorkoutLogger.model.repositories.WorkoutRepository;
+import it.hark.app.WorkoutLogger.utils.Utils;
 
 @Controller
 public class WorkoutLoggerController {
@@ -33,11 +34,7 @@ public class WorkoutLoggerController {
 	public String loadTable(Model model) {
 		logger.info("Received request for loadTable()");
 		model.addAttribute("workouts", workoutRepository.findAll());
-		try {
-			  Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			  Thread.currentThread().interrupt();
-		}
+		Utils.sleep(2000);
 		return "table";
 	}
 	
@@ -54,5 +51,11 @@ public class WorkoutLoggerController {
 		logger.info("Persisting the following workout: " + workout.toString());
 		workoutRepository.save(workout);
 		return "reload-table";
+	}
+	
+	@GetMapping("/workouts")
+	public String getWorkouts(Model model) {
+		logger.info("Received request for getWorkouts()");
+		return "workouts";
 	}
 }
