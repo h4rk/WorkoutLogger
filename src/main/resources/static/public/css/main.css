@@ -1,0 +1,51 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: 'Roboto', sans-serif;
+}
+
+  nav {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #333;
+      height: 5svh;
+  }
+
+  nav div {
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+  }
+
+  nav div:hover {
+      background-color: #555;
+  }
+  .container {
+    height: 95svh;
+    width: 100svw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-content: center;
+    grid-gap: 1em;
+    padding: 3em;
+}
+  #workouts-section, #schede-section {
+
+    border-radius: 15px;
+    padding: 2rem;
+    grid-area: span 1;
+    min-width: 450px;
+    text-align: center;
+    background-color: #999; 
+  }
+
+  .home-title {
+    color: #333; 
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+  }

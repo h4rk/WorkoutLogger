@@ -3,20 +3,24 @@
     <head>
         <title>Workout Logger</title>
         <script src="https://unpkg.com/htmx.org@1.9.9"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <script type = "text/javascript" src="/public/utils.js"></script>
+        <link rel="stylesheet" type="text/css" href="/public/style.css">
     </head>
     <body>
     	<nav>
     		<div hx-get="/schede">Schede</div>
-    		<div hx-get="/workouts" hx-target="body" style="color:855d49">Workouts</div>
-    	</nav>        
-        <section>
-        	<h2>Workout recenti:</h2>
-        	<p> Quadratino a mezza pagina con riassunto degli ultimi N workout registrati a DB, hx-get con lazy loading</p>
+    		<div hx-get="/workouts" hx-target="body">Workouts</div>
+    	</nav>
+        <div class="container">     
+        <section id="workouts-section">
+        	<h2 class="home-title">Workout recenti:</h2>
+        	<div><p> Quadratino a mezza pagina con riassunto degli ultimi N workout registrati a DB, hx-get con lazy loading</p></div>
         </section>
-        <section>
-        	<h2>Schede recenti:</h2>
-        	<p> Quadratino a mezza pagina le ultime N schede allenamento inserite a DB, hx-get con lazy loading</p>
+        <section id="schede-section">
+        	<h2 class="home-title">Schede recenti:</h2>
+        	<div><p> Quadratino a mezza pagina le ultime N schede allenamento inserite a DB, hx-get con lazy loading</p></div>
         </section>
+    </div>   
     </body>
 </html>
