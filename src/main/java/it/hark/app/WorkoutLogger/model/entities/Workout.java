@@ -1,4 +1,4 @@
-package it.hark.app.workoutlogger.model.entities;
+package it.hark.app.WorkoutLogger.model.entities;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
