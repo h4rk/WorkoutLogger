@@ -21,11 +21,11 @@ public class Utils {
 				nav.add(new Div("schede-btn", "schede", "Schede"));
 				break;
 			case "workouts":
-				nav.add(new Div("home-btn", "", "Home"));
+				nav.add(new Div("home-btn", "home", "Home"));
 				nav.add(new Div("schede-btn", "schede", "Schede"));
 				break;
 			case "schede":
-				nav.add(new Div("home-btn", "", "Home"));
+				nav.add(new Div("home-btn", "home", "Home"));
 				nav.add(new Div("workouts-btn", "workouts", "Workouts"));
 				break;
 		}

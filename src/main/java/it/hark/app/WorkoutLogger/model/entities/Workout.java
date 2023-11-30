@@ -10,11 +10,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Table(name = "Workout")
+@Getter
+@Setter
 public class Workout {
 	
 	public Workout() {}
@@ -33,32 +39,29 @@ public class Workout {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@Getter
-	@Setter
 	private Integer idWorkout;
 	
-	@Getter
-	@Setter
+	@NotBlank(message="Il campo non può essere vuoto o null")
 	private Integer idScheda;
 	
-	@Setter
+	@NotBlank(message="Il campo non può essere vuoto o null")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date data;
 	
-	@Getter
-	@Setter
+	@Positive
+	@NotBlank(message="Il campo non può essere vuoto o null")
 	private Integer durata;
 	
-	@Getter
-	@Setter
+	@Positive
+	@NotBlank(message="Il campo non può essere vuoto o null")
 	private Integer kcal;
 	
-	@Getter
-	@Setter
+	@NotBlank(message="Il campo non può essere vuoto o null")
+	@Positive(message="Il campo deve essere un numero tra 1 e 5 (compresi)")
+	@Max(value=5, message="Il campo deve essere un numero tra 1 e 5 (compresi)")
 	private short feelScore;
 	
-	@Getter
-	@Setter
+	@Size(max=200, message="Lunghezza massima consentita: 300 caratteri")
 	private String note;
 	
 	@Override

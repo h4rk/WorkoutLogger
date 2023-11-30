@@ -1,0 +1,11 @@
+<div th:fragment="main" class="container">     
+    <section id="workouts-section">
+    	<h2 class="home-title">Workout recenti:</h2>
+    	<div><p> Quadratino a mezza pagina con riassunto degli ultimi N workout registrati a DB, hx-get con lazy loading</p></div>
+    </section>
+    <section id="schede-section">
+    	<h2 class="home-title">Schede recenti:</h2>
+    	<div><p> Quadratino a mezza pagina le ultime N schede allenamento inserite a DB, hx-get con lazy loading</p></div>
+    </section>
+</div>
+<nav th:replace="~{fragments/nav.html :: nav}"/>

@@ -8,18 +8,7 @@
         <link rel="stylesheet" type="text/css" href="/public/css/main.css">
     </head>
     <body>
-    	<nav id="dynamic-nav" th:replace="~{fragments/nav.html :: nav}"/>
-	     <main>
-	        <div class="container">     
-		        <section id="workouts-section">
-		        	<h2 class="home-title">Workout recenti:</h2>
-		        	<div><p> Quadratino a mezza pagina con riassunto degli ultimi N workout registrati a DB, hx-get con lazy loading</p></div>
-		        </section>
-		        <section id="schede-section">
-		        	<h2 class="home-title">Schede recenti:</h2>
-		        	<div><p> Quadratino a mezza pagina le ultime N schede allenamento inserite a DB, hx-get con lazy loading</p></div>
-		        </section>
-	    	</div>
-	    </main>   
+		<nav th:replace="~{fragments/nav.html :: nav}"/>
+	    <main th:insert="~{fragments/main.html :: main}"/>
     </body>
 </html>
