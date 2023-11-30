@@ -27,6 +27,8 @@ public class WorkoutLoggerController {
 	@GetMapping("/")
 	public String index(Model model) {
 		logger.info("Received request for index()");
+		model.addAttribute("navElements", Utils.generateNav("index"));
+		model.addAttribute("swapNav", true);
 		return "index";
 	}
 	
@@ -54,8 +56,18 @@ public class WorkoutLoggerController {
 	}
 	
 	@GetMapping("/workouts")
-	public String getWorkouts() {
+	public String getWorkouts(Model model) {
 		logger.info("Received request for getWorkouts()");
+		model.addAttribute("swapNav", true);
+		model.addAttribute("navElements", Utils.generateNav("workouts"));
 		return "workouts";
+	}
+	
+	@GetMapping("/schede")
+	public String getSchede(Model model) {
+		logger.info("Received request for getSchede()");
+		model.addAttribute("swapNav", true);
+		model.addAttribute("navElements", Utils.generateNav("schede"));
+		return "schede";
 	}
 }

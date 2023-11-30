@@ -1,28 +1,27 @@
-<nav>
-   	<div hx-get="/">Home</div>
-   	<div hx-get="/schede">Schede</div>
-  </nav> 
-<section>
-	<h2>Workout Logger</h2>
-   	<div class="container">
-       	<h3>Nuovo workout:</h3>
-       	<form action="">
-        	<input name="idScheda" type="text" placeholder="id scheda" class="inputfield">
-        	<input name="data" type="date" placeholder="data" class="inputfield">
-        	<input name="durata" type="number" placeholder="durata" class="inputfield">
-        	<input name="kcal" type="number" placeholder="kcal" class="inputfield">
-        	<input name="feelScore" type="number" placeholder="feel score" class="inputfield">
-        	<input name="note" type="text"placeholder="note" class="inputfield">
-        	<div onclick="clear_inputs('inputfield')">Reset</div>
-        	<div hx-post="/postWorkout" hx-target="#table-container">Add</div>
-        </form>
-   	</div>
-</section>
-<section>
-	<h2>Workouts:</h2>
-	<div id="table-container">
-		<div hx-get="/loadTable" hx-trigger="load" hx-swap="outerHTML">
-   			<img  alt="Loading table..." class="htmx-indicator" width="100" src="/public/imgs/3-dots-scale.svg"/>
-		</div>
- 	</div>
-</section>
+<div class="container">
+	<section>
+		<h2>Workout Logger</h2>
+	   	<div class="container">
+	       	<h3>Nuovo workout:</h3>
+	       	<form action="">
+	        	<input name="idScheda" type="text" placeholder="id scheda" class="inputfield">
+	        	<input name="data" type="date" placeholder="data" class="inputfield">
+	        	<input name="durata" type="number" placeholder="durata" class="inputfield">
+	        	<input name="kcal" type="number" placeholder="kcal" class="inputfield">
+	        	<input name="feelScore" type="number" placeholder="feel score" class="inputfield">
+	        	<input name="note" type="text"placeholder="note" class="inputfield">
+	        	<div onclick="clear_inputs('inputfield')">Reset</div>
+	        	<div hx-post="/postWorkout" hx-target="#table-container">Add</div>
+	        </form>
+	   	</div>
+	</section>
+	<section>
+		<h2>Workouts:</h2>
+		<div id="table-container">
+			<div hx-get="/loadTable" hx-trigger="load" hx-swap="outerHTML">
+	   			<img  alt="Loading table..." class="htmx-indicator" width="100" src="/public/imgs/3-dots-scale.svg"/>
+			</div>
+	 	</div>
+	</section>
+</div>
+<nav th:replace="~{fragments/nav.html :: nav}"/>
