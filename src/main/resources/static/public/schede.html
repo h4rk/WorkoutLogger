@@ -1,7 +1,32 @@
 <div class="container">
-	<section>
-		<h2>Schede</h2>
-		<p>TODO</p>
+	<section aria-labelledby="new-workout-header">
+		<h2 id="new-workout-header">Nuova Scheda:</h2>
+		<div class="content-container">
+			<form id="new-workout-form" action="/postWorkout" method="post">
+				<div class="form-input">
+					<label for="NomeScheda">Nome</label>
+					<input id="NomeScheda" name="NomeScheda" type="text" placeholder="Inserisci il nome della scheda" class="inputfield">
+					<small class="error-message">spazio errore</small>
+				</div>
+				<div class="form-input">
+					<label for="DescrizioneScheda">Descrizione</label>
+					<textarea id="DescrizioneScheda" name="DescrizioneScheda" placeholder="Descrizione della scheda" class="inputfield"></textarea>
+					<small class="error-message">spazio errore</small>
+				</div>
+				<div class="form-controls">
+					<button type="button" onclick="clear_inputs('inputfield')">Reset</button>
+					<button type="submit" hx-post="/postWorkout" hx-target="#table-container">Add</button>
+				</div>
+			</form>
+		</div>
+	</section>
+	<section aria-labelledby="workouts-header">
+		<h2 id="workouts-header">Workouts:</h2>
+		<div id="table-container">
+			<div hx-get="/loadTable" hx-trigger="load" hx-swap="outerHTML">
+				<img alt="Loading table..." class="htmx-indicator" src="/public/imgs/3-dots-scale.svg"/>
+			</div>
+		</div>
 	</section>
 </div>
 <nav th:replace="~{fragments/nav.html :: nav}"/>

@@ -5,23 +5,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-  nav {
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      background-color: #333;
-      height: 5svh;
-  }
 
-  nav div {
-      color: white;
-      padding: 10px 20px;
-      cursor: pointer;
-  }
-
-  nav div:hover {
-      background-color: #555;
-  }
   .container {
     height: 95svh;
     width: 100svw;
@@ -48,6 +32,83 @@
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 2rem;
+  }
+
+  /* Form Inputs and Buttons */
+  .inputfield {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+  }
+
+  div[onclick] {
+      cursor: pointer;
+      color: white;
+      background-color: #007bff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-right: 10px;
+  }
+
+  div[hx-post] {
+      cursor: pointer;
+      color: white;
+      background-color: #28a745;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+  }
+
+  /* Table Container */
+  #table-container {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+  }
+
+  /* Navigation Bar */
+  #dynamic-nav div {
+      color: white;
+      cursor: pointer;
+  }
+
+  nav {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: #333;
+      height: 5svh;
+  }
+
+  nav div {
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+  }
+
+  nav div:hover {
+      background-color: #555;
+  }
+
+  .htmx-indicator {
+      display: block;
+      margin: 20px auto;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+      .container {
+          width: 100%;
+          padding: 10px;
+      }
+
+      #dynamic-nav {
+          flex-direction: column;
+      }
   }
   
   .btn {
