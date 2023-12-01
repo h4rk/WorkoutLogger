@@ -2,22 +2,33 @@
 	<section>
 		<h2>Workout Logger</h2>
 	   	<div class="content-container">
-	       	<h3>Nuovo workout:</h3>
-	       	<form action="">
-	        	<input name="idScheda" type="text" placeholder="id scheda" class="inputfield">
-	        	<input name="data" type="date" placeholder="data" class="inputfield">
-	        	<input name="durata" type="number" placeholder="durata" class="inputfield">
-	        	<input name="kcal" type="number" placeholder="kcal" class="inputfield">
-	        	<input name="feelScore" type="number" placeholder="feel score" class="inputfield">
-	        	<input name="note" type="text"placeholder="note" class="inputfield">
-	        	<div class="btn-blu" onclick="clear_inputs('inputfield')">Reset</div>
-	        	<div class="btn-verde" hx-post="/postWorkout" hx-target="#table-container">Add</div>
-	        </form>
+        <div class="workout-title">
+          <h3 data-text="Nuovo workout:">Nuovo workout:</h3>
+      </div>
+			<form action="" style="
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(40px, 200px));
+			max-height: 100vh;
+			align-content: center;
+			padding: 25px;
+    		grid-gap: 5px;
+    		grid-auto-rows: 1fr;
+    		justify-content: center;">
+				<input name="idScheda" type="text" placeholder="id scheda" class="inputfield" style="grid-area: 1/1;">
+				<input name="data" type="date" placeholder="data" class="inputfield" style="grid-area: 1/4;">
+				<input name="durata" type="number" placeholder="durata" class="inputfield" style="grid-area: 2 / 1 / 2 / 3;">
+				<input name="kcal" type="number" placeholder="kcal" class="inputfield" style="grid-area: 2 / 3;">
+				<input name="feelScore" type="number" placeholder="feel score" class="inputfield" style="grid-area: 2/4;">
+				<input name="note" type="text" placeholder="note" class="inputfield" style="grid-area: 3/1/5/5;">
+
+				<div class="btn-blu" onclick="clear_inputs('inputfield')" style=" grid-area: 5/1;">Reset</div>
+				<div class="btn-verde" hx-post="/postWorkout" hx-target="#table-container" style="grid-area: 5/2;">Add</div>
+			</form>
 	   	</div>
 	</section>
 	<section>
 		<h2>Workouts:</h2>
-		<div id="table-container">
+		<div id="table-container" class="table-modern">
 			<div hx-get="/loadTable" hx-trigger="load" hx-swap="outerHTML">
 	   			<img  alt="Loading table..." class="htmx-indicator" width="100" src="/public/imgs/3-dots-scale.svg"/>
 			</div>

@@ -1,10 +1,11 @@
 <table>
 	<thead>
-		<tr>
-			<th>Workout</th>
-			<th>Data</th>
-			<th>Kcal</th>
-		</tr>
+	<tr>
+		<th>Workout</th>
+		<th>Date</th>
+		<th>Kcal</th>
+		<th>Action</th> <!-- Aggiunto Header per le azioni -->
+	</tr>
 	</thead>
 	<tbody hx-confirm="Are you sure?">
          <tr th:each="workout: ${workouts}">

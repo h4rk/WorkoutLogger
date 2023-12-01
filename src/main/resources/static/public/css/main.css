@@ -5,7 +5,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+main {
+    color: #333;
+    background: #ebe4dc;
 
+}
   .container {
     height: 95svh;
     width: 100svw;
@@ -64,35 +68,16 @@
   }
 
   /* Table Container */
-  #table-container {
-      padding: 20px;
-      background-color: #f8f9fa;
-      border: 1px solid #ddd;
-  }
+#table-container {
+    padding: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
 
-  /* Navigation Bar */
-  #dynamic-nav div {
-      color: white;
-      cursor: pointer;
-  }
 
-  nav {
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      background-color: #333;
-      height: 5svh;
-  }
-
-  nav div {
-      color: white;
-      padding: 10px 20px;
-      cursor: pointer;
-  }
-
-  nav div:hover {
-      background-color: #555;
-  }
 
   .htmx-indicator {
       display: block;
@@ -106,9 +91,6 @@
           padding: 10px;
       }
 
-      #dynamic-nav {
-          flex-direction: column;
-      }
   }
   
   .btn {
@@ -117,3 +99,182 @@
 	border-radius:15px;
 	padding:20px;
 	}
+
+
+/* Workout Table Css  */
+
+.table-modern {
+    max-width: 900px;
+    max-height: 70svh;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.table-modern table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-modern th, .table-modern td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-modern th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.table-modern tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-modern tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table-modern .btn {
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    background-color: #E63946;
+    color: #ffe2e4;
+    cursor: pointer;
+}
+
+.table-modern .btn:hover {
+      background-color: #91121D;
+      color: #ffadb4;
+}
+
+.table-modern .btn-danger {
+
+}
+
+.content-container {
+    background: white;
+    padding: 26px;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: relative; 
+}
+.workout-title {
+  width: fit-content;
+}
+.content-container h3 {
+  position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: black;
+    z-index: 2;
+    font-size: 2rem;
+}
+
+.content-container h3::before {
+    content: attr(data-text);
+    position: absolute;
+    height: 53%;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    background-color: #ffa500;
+    -webkit-background-clip: text;
+    background-clip: text;
+    overflow: hidden;
+    color: #ffdd9d;
+}
+
+.content-container h3::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 20px);
+    height: 85%;
+    background-color: #ffa500;
+    top: -11px;
+    left: -5px;
+    z-index: 0;
+}
+
+
+
+.btn-verde{
+    cursor: pointer;
+    color: #d9ffec;
+    background-color: #02bd60;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.btn-verde:hover{
+    background: #017541;
+    color: #c3ffe4;
+}
+
+.btn-blu {
+    cursor: pointer;
+    color: #addfff;
+    background-color: #457B9D;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.btn-blu:hover {
+    background: #1d5273;
+}
+
+
+  /* Navigation Bar */
+    #dynamic-nav div {
+        color: #cccccc;
+        cursor: pointer;
+        height: inherit;
+        min-width: 150px;
+        font-size: 1.5rem;
+        text-align: center;
+        /* Add the following rules to center vertically */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+  nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      height: 5svh;
+  }
+
+  #dynamic-nav div:hover {
+      background-color: #FFA500;
+      color: #333333;
+  }
+
+
+  /* For Webkit-based Browsers (Chrome, Safari, etc.) */
+  /* Scrollbar */
+  .table-modern::-webkit-scrollbar {
+      width: 25px; /* Set the width of the scrollbar */
+
+
+  }
+
+  /* Track (the area where the scrollbar runs) */
+  .table-modern::-webkit-scrollbar-track {
+      background: #333; /* Background color of the track */
+      border-radius: 0px 20px 20px 0px; /* Rounded corners */
+
+  }
+
+  /* Thumb (the draggable part of the scrollbar) */
+  .table-modern::-webkit-scrollbar-thumb {
+      background: #FFA500; /* Background color of the thumb */
+      border-radius: 0px 20px 20px 0px; /* Rounded corners for the thumb */
+  }
